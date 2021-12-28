@@ -1,16 +1,18 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from tkinter import Button, Label, Entry, Frame, Tk
+from tkinter.font import Font, ITALIC
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class App(Tk):
+    def __init__(self):
+        super().__init__()
+        self.geometry("400x500")
+        self.title("Calculator")
+        self.createWidgets()
 
+    def createWidgets(self):
+        butts = Button(self,text ="Click")
+        butts.pack()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
